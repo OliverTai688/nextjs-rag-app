@@ -7,15 +7,12 @@ import { Pool } from "pg";
 import { AIMessage, HumanMessage, SystemMessage } from "@langchain/core/messages";
 
 // 環境變數
-const supabaseUrl = process.env.SUPABASE_URL!;
-const supabaseKey = process.env.SUPABASE_KEY!;
 const openaiApiKey = process.env.OPENAI_API_KEY!;
 const dbUrl = process.env.DATABASE_URL!;
 
 console.log("Database URL:", process.env.DATABASE_URL);
 
-// 初始化 Supabase
-const supabase = createClient(supabaseUrl, supabaseKey);
+
 
 // 初始化 PostgreSQL 連線池
 const pool = new Pool({ connectionString: dbUrl });
