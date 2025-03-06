@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { ChatOpenAI } from "@langchain/openai";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { PGVectorStore } from "@langchain/community/vectorstores/pgvector";
-import { createClient } from "@supabase/supabase-js";
 import { Pool } from "pg";
 import { AIMessage, HumanMessage, SystemMessage } from "@langchain/core/messages";
 
